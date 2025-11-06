@@ -25,11 +25,11 @@ if (!$data || !isset($data['to']) || !isset($data['from']) || !isset($data['mess
 
 // CONFIG: modifica DASHBOARD_HOST si tu cuenta usa otro host.
 // Por defecto usamos dashboard.360nrs.com (si en tu cuenta tu host es distinto, reemplaza).
-$dashboardHost = getenv('DASHBOARD_HOST') ?: 'https://dashboard.360nrs.com';
+$dashboardHost = getenv('DASHBOARD_HOST');
 
 // AUTORIZACIÓN: token base64. Recomendado: guardarlo en variable de entorno en Vercel.
 // Si no existe, usa el token que me diste (solo para pruebas).
-$authTokenBase64 = getenv('AUTH_TOKEN_BASE64') ?: 'YXNzY29tMzYwOlpCeno4MyFA';
+$authTokenBase64 = getenv('AUTH_TOKEN_BASE64');
 
 // Construir payload JSON (la API espera "to" como array)
 $payload = [
